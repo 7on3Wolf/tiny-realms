@@ -1,0 +1,15 @@
+<svg viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle/square (optional dark theme base) -->
+  <rect width="500" height="500" rx="100" fill="#17171A"/>
+  
+  <!-- Tiny Realms Planet Dome -->
+  <path d="M 144 280 C 138 184, 196 150, 250 150 C 304 150, 362 184, 356 280 C 330 288, 292 293, 250 293 C 208 293, 170 288, 144 280 Z" fill="#FFFFFF"/>
+  
+  <!-- Vertical Oval Eyes -->
+  <ellipse cx="206" cy="245" rx="13" ry="20" fill="#17171A"/>
+  <ellipse cx="294" cy="245" rx="13" ry="20" fill="#17171A"/>
+  
+  <!-- Sweeping Planetary Orbit Ring -->
+  <path d="M 390 202 C 426 210, 430 228, 396 250 C 352 278, 280 312, 195 324 C 130 334, 85 328, 80 312 C 75 296, 105 274, 148 256 C 136 270, 118 284, 118 296 C 118 308, 156 316, 212 308 C 285 296, 360 264, 396 238 C 418 222, 408 210, 386 206 L 390 202 Z" fill="#FFFFFF"/>
+  <path d="M 258 338 C 308 334, 348 308, 362 284 C 350 306, 308 328, 258 338 Z" fill="#FFFFFF"/>
+</svg>

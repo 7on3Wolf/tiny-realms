@@ -1,0 +1,54 @@
+{
+  "entities": {
+    "Artwork": {
+      "title": "Artwork",
+      "description": "Digital NFT artwork entry catalogued for Tiny Realms",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "description": "Unique identifier of the artwork" },
+        "code": { "type": "string", "description": "Inventory reference code, e.g. TR-001" },
+        "title": { "type": "string", "description": "Artwork title" },
+        "description": { "type": "string", "description": "Artwork description or narrative" },
+        "image": { "type": "string", "description": "Image URL or data URI of the artwork" },
+        "dimensions": { "type": "string", "description": "Image resolution dimensions" },
+        "category": { "type": "string", "description": "Category name, e.g. Digital Character" },
+        "status": { "type": "string", "enum": ["Available", "Sold", "Reserved", "Archived"], "description": "Commercial availability status" },
+        "published": { "type": "boolean", "description": "Whether the artwork is visible publicly" },
+        "collectionId": { "type": "string", "description": "Associated collection identifier" },
+        "collection": { "type": "string", "description": "Associated collection name" },
+        "year": { "type": "number", "description": "Creation year" },
+        "nftUrl": { "type": "string", "description": "External marketplace link, e.g. XRP Cafe NFT link" },
+        "tags": { "type": "array", "description": "Search and thematic tags" },
+        "createdAt": { "type": "string", "description": "ISO timestamp of creation" },
+        "updatedAt": { "type": "string", "description": "ISO timestamp of last update" }
+      },
+      "required": ["id", "title", "image", "status", "published"]
+    },
+    "Collection": {
+      "title": "Collection",
+      "description": "Art collection / series grouping",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "description": "Unique collection identifier" },
+        "name": { "type": "string", "description": "Collection name" },
+        "description": { "type": "string", "description": "Collection narrative and summary" },
+        "year": { "type": "number", "description": "Collection release year" },
+        "coverImage": { "type": "string", "description": "Cover art image URL" },
+        "status": { "type": "string", "enum": ["Active", "Archived"], "description": "Collection status" },
+        "createdAt": { "type": "string", "description": "Creation timestamp" },
+        "updatedAt": { "type": "string", "description": "Update timestamp" }
+      },
+      "required": ["id", "name", "status"]
+    }
+  },
+  "firestore": {
+    "/artworks/{artworkId}": {
+      "schema": "Artwork",
+      "description": "Global collection of artworks and NFTs uploaded via admin panel"
+    },
+    "/collections/{collectionId}": {
+      "schema": "Collection",
+      "description": "Global list of art series and collections"
+    }
+  }
+}

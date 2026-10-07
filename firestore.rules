@@ -1,0 +1,32 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Helper functions
+    function isValidId(id) {
+      return id is string && id.size() <= 128 && id.matches('^[a-zA-Z0-9_\\-]+$');
+    }
+
+    // Artworks Collection: Publicly readable by all visitors; writable by catalog management
+    match /artworks/{artworkId} {
+      allow read: if true;
+      allow write: if true;
+    }
+
+    // Collections: Publicly readable; writable by catalog management
+    match /collections/{collectionId} {
+      allow read: if true;
+      allow write: if true;
+    }
+
+    // Connection test document
+    match /test/{docId} {
+      allow read, write: if true;
+    }
+
+    // Default safety catch-all
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

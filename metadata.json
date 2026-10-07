@@ -1,0 +1,6 @@
+{
+  "name": "Tiny Realms — Anime Art",
+  "description": "Tiny Realms — Anime Art Gallery and Digital Character Collection.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

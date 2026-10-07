@@ -1,0 +1,267 @@
+@import "tailwindcss";
+
+@theme {
+  --font-global: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-sans: var(--font-global);
+  --font-paragraph: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-body: var(--font-paragraph);
+  --font-display: 'Fredoka', system-ui, sans-serif;
+  --font-hero-title: 'Fredoka', system-ui, sans-serif;
+  --font-heading: 'Fredoka', system-ui, sans-serif;
+  --font-serif: 'Fredoka', Georgia, serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  --font-jp: var(--font-display);
+  --font-pizza: var(--font-display);
+
+  --color-tr-bg: #696866;
+  --color-tr-dark: #24170F;
+  --color-tr-chocolate: #4A2D1A;
+  --color-tr-medium-brown: #70431F;
+  --color-tr-parchment: #E8D2A8;
+  --color-tr-parchment-light: #F3E4C5;
+  --color-tr-cream: #F5EBDD;
+  --color-tr-warm-beige: #CDBCA8;
+  --color-tr-border: #5A351E;
+  --color-tr-accent: #C69B5A;
+  --color-tr-accent-bright: #D9A85C;
+  --color-tr-success: #7FAF45;
+  --color-tr-disabled: #77736D;
+}
+
+@layer base {
+  :root {
+    --font-global: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-sans: var(--font-global);
+    --font-paragraph: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-body: var(--font-paragraph);
+    --font-display: 'Fredoka', system-ui, sans-serif;
+    --font-hero-title: 'Fredoka', system-ui, sans-serif;
+    --font-heading: 'Fredoka', system-ui, sans-serif;
+    --font-serif: 'Fredoka', Georgia, serif;
+    --font-mono: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    --font-jp: var(--font-display);
+    --font-pizza: var(--font-display);
+
+    --tr-bg: #696866;
+    --tr-dark: #24170F;
+    --tr-chocolate: #4A2D1A;
+    --tr-medium-brown: #70431F;
+    --tr-parchment: #E8D2A8;
+    --tr-parchment-light: #F3E4C5;
+    --tr-cream: #F5EBDD;
+    --tr-warm-beige: #CDBCA8;
+    --tr-border: #5A351E;
+    --tr-accent: #C69B5A;
+    --tr-accent-bright: #D9A85C;
+    --tr-success: #7FAF45;
+    --tr-disabled: #77736D;
+
+    /* Legacy mapping fallback for semantic continuity */
+    --bg-primary: #696866;
+    --bg-secondary: #4A2D1A;
+    --text-primary: #F5EBDD;
+    --text-secondary: #CDBCA8;
+    --border-color: #5A351E;
+    --accent-color: #C69B5A;
+    --dark-section: #24170F;
+  }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #696866;
+    color: #F5EBDD;
+    font-family: var(--font-global);
+  }
+
+  body {
+    background-color: #696866;
+    color: #F5EBDD;
+    font-family: var(--font-global);
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    letter-spacing: 0.02em;
+  }
+
+  p {
+    font-family: var(--font-paragraph);
+  }
+
+  button, input, optgroup, select, textarea {
+    font-family: inherit;
+  }
+}
+
+/* Global Font Family Utility Classes */
+.font-sans {
+  font-family: var(--font-sans);
+}
+
+.font-paragraph,
+.font-body {
+  font-family: var(--font-paragraph);
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-hero-title {
+  font-family: var(--font-hero-title);
+}
+
+.font-heading {
+  font-family: var(--font-heading);
+}
+
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+.font-jp {
+  font-family: var(--font-jp);
+}
+
+.font-pizza {
+  font-family: var(--font-pizza);
+}
+
+
+/* ======================================================== */
+/* CONTINUOUS DUAL-DIRECTION GALLERY MARQUEE ANIMATIONS      */
+/* ======================================================== */
+
+@keyframes gallery-marquee-left {
+  0% {
+    transform: translate3d(0%, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@keyframes gallery-marquee-right {
+  0% {
+    transform: translate3d(-50%, 0, 0);
+  }
+  100% {
+    transform: translate3d(0%, 0, 0);
+  }
+}
+
+.animate-gallery-marquee-left {
+  display: flex;
+  width: max-content;
+  animation: gallery-marquee-left 42s linear infinite;
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+.animate-gallery-marquee-right {
+  display: flex;
+  width: max-content;
+  animation: gallery-marquee-right 42s linear infinite;
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+/* Subtle gallery hover transitions */
+.gallery-card-hover {
+  transition: transform 300ms cubic-bezier(0.16, 1, 0.3, 1), box-shadow 300ms ease, border-color 300ms ease;
+}
+
+.gallery-card-hover:hover {
+  transform: translateY(-4px);
+}
+
+.hero-artwork-hover {
+  transition: transform 300ms cubic-bezier(0.16, 1, 0.3, 1), box-shadow 300ms ease;
+}
+
+.hero-artwork-hover:hover {
+  transform: scale(1.02);
+}
+
+/* ======================================================== */
+/* POSTER PAPER & TACTILE CARVED WOOD UTILITIES             */
+/* ======================================================== */
+
+.poster-paper {
+  background-image: 
+    radial-gradient(ellipse at top left, rgba(255, 255, 255, 0.05) 0%, transparent 60%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.03) 0%, rgba(0, 0, 0, 0.15) 100%);
+  box-shadow:
+    0 1px 1px rgba(0, 0, 0, 0.15),
+    0 4px 8px -2px rgba(0, 0, 0, 0.3),
+    0 16px 32px -6px rgba(0, 0, 0, 0.45),
+    inset 0 1px 1px rgba(255, 255, 255, 0.1);
+}
+
+.poster-paper-parchment {
+  background-image:
+    radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.3) 0%, transparent 70%),
+    linear-gradient(180deg, #F5E8CF 0%, #E8D2A8 50%, #D8BE8E 100%);
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.2),
+    0 8px 24px -4px rgba(36, 23, 15, 0.35),
+    inset 0 1px 2px rgba(255, 255, 255, 0.5),
+    inset 0 0 20px rgba(90, 53, 30, 0.08);
+}
+
+/* ======================================================== */
+/* HIGH-PERFORMANCE MINIMALIST SLIM SCROLLBAR (0% LAG)       */
+/* 100% GPU-accelerated, Zero JS, Ultra-fast 60/120fps       */
+/* ======================================================== */
+
+/* Firefox & Standards */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(198, 155, 90, 0.35) transparent;
+}
+
+/* WebKit / Chromium (Chrome, Edge, Opera, Brave, Safari) */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(198, 155, 90, 0.28);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(217, 168, 92, 0.85);
+}
+
+/* Shimmer wave animation for image skeletons */
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.animate-shimmer {
+  animation: shimmer 1.8s infinite;
+}
+
+
+

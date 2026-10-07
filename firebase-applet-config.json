@@ -1,0 +1,10 @@
+{
+  "projectId": "tiny-real",
+  "appId": "1:755079038981:web:bf13434e434ab6beccb46c",
+  "apiKey": "AIzaSyBIFB7sFwKGrnaRoUWTThppUvV7W6RtHtg",
+  "authDomain": "tiny-real.firebaseapp.com",
+  "firestoreDatabaseId": "(default)",
+  "storageBucket": "tiny-real.firebasestorage.app",
+  "messagingSenderId": "755079038981",
+  "measurementId": "G-6DZNF8BG8L"
+}
