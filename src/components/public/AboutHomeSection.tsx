@@ -1,13 +1,13 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { FiArrowRight, FiFeather, FiCompass, FiHeart } from 'react-icons/fi';
-import SectionHeader from '../common/SectionHeader';
-import BaseButton from '../ui/BaseButton';
+import React from "react";
+import { Link } from "react-router-dom";
+import { FiArrowRight, FiFeather, FiCompass, FiHeart } from "react-icons/fi";
+import SectionHeader from "../common/SectionHeader";
+import BaseButton from "../ui/BaseButton";
 
 // Character artwork assets for the 3 story blocks
-import sproutBear from '../../assets/images/characters/sprout_bear.png';
-import pandaWizard from '../../assets/images/characters/panda_wizard.png';
-import celestialAngelBear from '../../assets/images/characters/celestial_angel_bear.png';
+import sproutBear from "../../assets/images/characters/bamboru.png";
+import pandaWizard from "../../assets/images/characters/brunko.png";
+import celestialAngelBear from "../../assets/images/characters/kumo.png";
 
 /**
  * AboutHomeSection Component
@@ -27,16 +27,15 @@ export const AboutHomeSection: React.FC = () => {
       <div
         className="absolute inset-0 pointer-events-none select-none opacity-30"
         style={{
-          background: 'radial-gradient(ellipse 70% 60% at 50% 45%, rgba(198, 155, 90, 0.22), transparent 70%)',
+          background:
+            "radial-gradient(ellipse 70% 60% at 50% 45%, rgba(198, 155, 90, 0.22), transparent 70%)",
         }}
         aria-hidden="true"
       />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 w-full relative z-10 flex flex-col justify-start">
-        
         {/* MAIN PANEL CONTAINER WITH MODERN GLASSMORPHISM */}
         <div className="w-full bg-[#1A1108]/90 border border-[#5A3820]/40 rounded-2xl sm:rounded-3xl p-4 sm:p-8 lg:p-10 shadow-[0_20px_50px_rgba(10,5,2,0.7)] backdrop-blur-md flex flex-col justify-between relative overflow-hidden">
-          
           {/* Subtle Ambient Decorative Gradients */}
           <div className="absolute top-0 right-0 w-64 h-64 bg-[#C69B5A]/5 rounded-full blur-3xl pointer-events-none" />
           <div className="absolute bottom-0 left-0 w-64 h-64 bg-[#8C5D19]/5 rounded-full blur-3xl pointer-events-none" />
@@ -52,12 +51,11 @@ export const AboutHomeSection: React.FC = () => {
 
           {/* MODERN ASYMMETRIC BENTO GRID */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6 items-stretch mb-8 sm:mb-10">
-            
             {/* CARD 1: THE ORIGIN & XRPL (col-span-2) */}
             <div className="group relative md:col-span-2 flex flex-col justify-between p-6 sm:p-8 rounded-3xl bg-gradient-to-br from-[#2D1B11]/95 to-[#1A1108]/95 border border-[#5A3820]/60 hover:border-[#C69B5A]/70 hover:shadow-[0_12px_40px_rgba(198,155,90,0.12)] transition-all duration-500 hover:-translate-y-1 overflow-hidden">
               {/* Ambient Top Glow on Hover */}
               <div className="absolute top-0 inset-x-0 h-24 bg-gradient-to-b from-[#C69B5A]/10 to-transparent pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              
+
               <div className="flex flex-col sm:flex-row gap-6 items-center h-full justify-between relative z-10">
                 <div className="flex-1 space-y-4 text-center sm:text-left">
                   {/* Badge & Number */}
@@ -66,7 +64,9 @@ export const AboutHomeSection: React.FC = () => {
                       <FiCompass className="w-3.5 h-3.5 text-[#C69B5A]" />
                       <span>THE BEGINNING</span>
                     </div>
-                    <span className="font-mono font-bold text-xs text-[#C69B5A]/80">01</span>
+                    <span className="font-mono font-bold text-xs text-[#C69B5A]/80">
+                      01
+                    </span>
                   </div>
 
                   {/* Title */}
@@ -76,7 +76,10 @@ export const AboutHomeSection: React.FC = () => {
 
                   {/* Text */}
                   <p className="font-sans text-xs sm:text-sm text-[#CDBCA8] sm:text-[#D5C4B1] leading-relaxed">
-                    Tiny Realms was founded by two creators from Indonesia with a shared passion for character design. Discovering the XRPL ecosystem inspired us to bring our hand-drawn characters and creative world to life.
+                    Tiny Realms was founded by two creators from Indonesia with
+                    a shared passion for character design. Discovering the XRPL
+                    ecosystem inspired us to bring our hand-drawn characters and
+                    creative world to life.
                   </p>
                 </div>
 
@@ -106,7 +109,9 @@ export const AboutHomeSection: React.FC = () => {
                       <FiFeather className="w-3.5 h-3.5 text-[#C69B5A]" />
                       <span>ARTISAN PROCESS</span>
                     </div>
-                    <span className="font-mono font-bold text-xs text-[#C69B5A]/80">02</span>
+                    <span className="font-mono font-bold text-xs text-[#C69B5A]/80">
+                      02
+                    </span>
                   </div>
 
                   {/* Title */}
@@ -130,7 +135,10 @@ export const AboutHomeSection: React.FC = () => {
 
                 {/* Description */}
                 <p className="font-sans text-xs sm:text-sm text-[#CDBCA8] sm:text-[#D5C4B1] leading-relaxed">
-                  Every character begins with authentic hand-drawn sketches. We enjoy experimenting with distinct outfits, whimsical lore, and unique personalities—slowly building our realm one idea at a time.
+                  Every character begins with authentic hand-drawn sketches. We
+                  enjoy experimenting with distinct outfits, whimsical lore, and
+                  unique personalities—slowly building our realm one idea at a
+                  time.
                 </p>
               </div>
             </div>
@@ -159,7 +167,9 @@ export const AboutHomeSection: React.FC = () => {
                       <FiHeart className="w-3.5 h-3.5 text-[#C69B5A]" />
                       <span>OUR HORIZON</span>
                     </div>
-                    <span className="font-mono font-bold text-xs text-[#C69B5A]/80">03</span>
+                    <span className="font-mono font-bold text-xs text-[#C69B5A]/80">
+                      03
+                    </span>
                   </div>
 
                   {/* Title */}
@@ -169,12 +179,13 @@ export const AboutHomeSection: React.FC = () => {
 
                   {/* Text */}
                   <p className="font-sans text-xs sm:text-sm text-[#CDBCA8] sm:text-[#D5C4B1] leading-relaxed">
-                    There is still so much we want to explore—new character realms, stories, and engaging perks for collectors. We are deeply grateful to everyone supporting us on this journey.
+                    There is still so much we want to explore—new character
+                    realms, stories, and engaging perks for collectors. We are
+                    deeply grateful to everyone supporting us on this journey.
                   </p>
                 </div>
               </div>
             </div>
-
           </div>
 
           {/* BOTTOM CALL-TO-ACTION */}
@@ -190,9 +201,7 @@ export const AboutHomeSection: React.FC = () => {
               </BaseButton>
             </Link>
           </div>
-
         </div>
-
       </div>
     </section>
   );
